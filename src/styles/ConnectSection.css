@@ -1,0 +1,97 @@
+.connect-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--neutral-color) 0%,
+    var(--neutral-color) 100%
+  );
+  color: var(--accent-color);
+}
+
+.connect-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.connect-section h2 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.connect-section > div > p {
+  font-size: 1.2rem;
+  margin: 0 0 3rem;
+  opacity: 0.95;
+}
+
+.connect-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.connect-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background: var(--theme-color);
+  color: var(--neutral-color);
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+
+.connect-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(var(--neutral-color-rgb), 0.2);
+  background: var(--accent-color);
+}
+
+.connect-btn .icon {
+  font-size: 1.5rem;
+}
+
+.connect-btn.email {
+  color: var(--neutral-color);
+}
+
+.connect-btn.linkedin {
+  color: var(--neutral-color);
+}
+
+.connect-btn.x {
+  color: var(--neutral-color);
+}
+
+@media (max-width: 768px) {
+  .connect-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .connect-buttons {
+    gap: 1rem;
+  }
+
+  .connect-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .connect-btn .icon {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,121 @@
+.footer {
+  min-height: 100vh;
+  background: var(--primary-color);
+  color: var(--neutral-color);
+  padding: 4rem 3rem;
+  text-align: left;
+  border-top: 2px solid var(--neutral-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.footer-header h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer-subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.footer-block h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.footer-block p {
+  margin: 0.35rem 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.footer-block a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 600;
+}
+
+.footer-block a:hover {
+  color: var(--neutral-color);
+  opacity: 0.8;
+}
+
+.footer-meta {
+  border-top: 1px solid rgba(var(--neutral-color-rgb), 0.25);
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.footer-meta p {
+  margin: 0;
+  opacity: 0.85;
+  font-weight: 300;
+}
+
+.footer-credit {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  opacity: 0.9;
+  text-transform: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.footer-credit-link {
+  font-weight: 400;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-credit-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 2rem;
+  }
+
+  .footer-header h2 {
+    font-size: 2rem;
+  }
+}

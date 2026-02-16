@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #d0ea9d;
+  --primary-color-dark: #b6d985;
+  --primary-color-rgb: 208, 234, 157;
+  --secondary-color: #9aa0a6;
+  --secondary-color-rgb: 154, 160, 166;
+  --neutral-color: #000000;
+  --neutral-color-rgb: 0, 0, 0;
+  --accent-color: #ffffff;
+  --accent-color-rgb: 255, 255, 255;
+
+  --theme-color: var(--primary-color);
+  --theme-color-dark: var(--primary-color-dark);
+  --theme-color-rgb: var(--primary-color-rgb);
+}
