@@ -46,7 +46,7 @@ export default function ConnectSection() {
             <span>Email</span>
           </a>
           <a
-            href="https://linkedin.com/in/sarojkbarik"
+            href="https://www.linkedin.com/in/saroj-barik-01448ba1/"
             target="_blank"
             rel="noopener noreferrer"
             className="connect-btn linkedin"

@@ -7,7 +7,12 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-header">
-          <h2>Prof. Saroj Kanta Barik</h2>
+          <h2 className="footer-title">
+            <div className="prof">PROF.</div>
+            <div>SAROJ</div>
+            <div>KANTA</div>
+            <div>BARIK</div>
+          </h2>
         </div>
 
         <div className="footer-grid">

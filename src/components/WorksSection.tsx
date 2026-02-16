@@ -7,37 +7,84 @@ const works = [
   {
     id: 1,
     type: "Publication",
-    title: "Biodiversity Assessment of Eastern Ghats",
-    description: "A comprehensive study on the endemic species diversity.",
-    year: 2023,
+    title:
+      "Progress and Prospects of Cyanide Pollution Remediation Research–A Global Review",
+    authors: "Gupta, A., Barik, S.K.* and Srivastava, P.K.",
+    publication: "Water, Air, & Soil Pollution 237:200. IF: 3.0 (2026)",
+    link: "https://www.researchgate.net/publication/398598882_Progress_and_Prospects_of_Cyanide_Pollution_Remediation_Research-_A_Global_Review",
   },
   {
     id: 2,
-    type: "Project",
-    title: "Conservation of Rare Orchid Species",
-    description: "Field study and in-situ conservation strategies.",
-    year: 2023,
+    type: "Publication",
+    title:
+      "Three hundred years history of Cyanide use in industries, its environmental risks and mitigation technologies",
+    authors: "Gupta, A., Manika, N., Srivastava, P.K. and Barik, S.K.*",
+    publication: "Environmental Sustainability. IF: 2.8 (2026)",
+    link: "https://www.researchgate.net/publication/398598882_Three_hundred_years_history_of_Cyanide_use_in_industries_its_environmental_risks_and_mitigation_technologies",
   },
   {
     id: 3,
     type: "Publication",
-    title: "Climate Change Impact on Flora",
-    description: "Research on shifting distribution patterns.",
-    year: 2022,
-  },
-  {
-    id: 4,
-    type: "Project",
-    title: "Community-Based Habitat Restoration",
-    description: "Engaging local communities in conservation.",
-    year: 2022,
+    title: "Measuring the Quality of Species List Contents",
+    authors: "Pape, T., Pyle, R.L., Bánki, O., Barik, S.K., et al.",
+    publication: "BioScience, 1–15. IF: 8.4 (2026)",
+    link: "https://doi.org/10.1093/biosci/biaf191",
   },
   {
     id: 5,
     type: "Publication",
-    title: "Medicinal Plants of India",
-    description: "Documentation of traditional medicine sources.",
-    year: 2021,
+    title:
+      "Identification and characterization of Poitrasia circinans and Neoscirrhia matteucciicola associated with ginger in Meghalaya, India",
+    authors: "Mohan, V., Joshi, S., Barik, S.K. and Joshi, S.R.",
+    publication: "Discover Plants 3:31. IF: 8.4 (2026)",
+    link: "https://doi.org/10.1007/s44372-026-00499-y",
+  },
+  {
+    id: 6,
+    type: "Publication",
+    title:
+      "Evaluation of in vivo anti-lithiatic activity of polyherbal formulation in ameliorating calcium oxalate kidney stones and integrated in vitro-in silico studies",
+    authors:
+      "Misra, A., Chaudhary, M.K., Rawat, P., Khan, H., Srivastava, V., Singh, D., Barik, S.K. and Srivastava, S.",
+    publication: "Fitoterapia 185:106739. IF: 2.6 (2025)",
+  },
+  {
+    id: 7,
+    type: "Publication",
+    title:
+      "Transcriptomic insights into elevation‐dependent gene expression in Rhododendron anthopogon D.Don: Implications for climate resilience",
+    authors:
+      "Mangral, Z.A., Islam, S.U., Majeed, A., Tariq, L., Goel, S., Barik, S.K., and Dar, T.U.H.",
+    publication: "Physiologia Plantarum 177(4): e70419. IF: 3.6 (2025)",
+  },
+  {
+    id: 8,
+    type: "Publication",
+    title:
+      "Genetic diversity analysis of Rhododendron arboreum in western Himalaya indicates altitudinal population differentiation and mid-elevation enrichment of heterozygotes",
+    authors:
+      "Sorokhaibam, S.S., Jhajhariya, M., Baishya, R., Barik, S.K., Goel, S. and Tandon, R.",
+    publication: "The Nucleus. IF: 2.6 (2025)",
+    link: "https://doi.org/10.1007/s13237-025-0059",
+  },
+  {
+    id: 9,
+    type: "Publication",
+    title:
+      "Metagenomic profiling of cyanide-degrading microbial communities in steel industry wastewater with an implication for bioremediation",
+    authors:
+      "Gupta, A., Naseem, M., Gupta, E., Srivastava, P.K. and Barik, S.K.",
+    publication: "ENGINEERING Environment 19(10):137. IF: 6.4 (2025)",
+  },
+  {
+    id: 10,
+    type: "Publication",
+    title:
+      "Integrated in vitro and in vivo antilithiatic efficacy of a synergistic herbal formulation, URO-5 and exploration of in silico guided mechanism of action",
+    authors:
+      "Misra, A., Rawat, P., Khan, H., Srivastava, V., Singh, D., Barik, S.K. and Srivastava, S.",
+    publication: "Phytochemistry Letters 69:103525. IF: 1.4 (2025)",
+    link: "https://doi.org/10.1016/j.phytol.2025.103525",
   },
 ];
 
@@ -83,17 +130,20 @@ const awards = [
   {
     link: "#",
     text: "Prof. R.N. Tandon Memorial Award",
-    image: "https://picsum.photos/600/400?random=8",
+    image:
+      "https://www.ipsdis.org/image/cache/catalog/Presidents/1966%20Tandon,%20R.N.-304x364.jpg",
   },
   {
     link: "#",
     text: "Dr. Brandis Award",
-    image: "https://picsum.photos/600/400?random=9",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/DietrichBrandis.jpg/500px-DietrichBrandis.jpg",
   },
   {
     link: "#",
     text: "Prof. Birbal Sahani Medal",
-    image: "https://picsum.photos/600/400?random=10",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bust_of_Birbal_Sahni_%28Birla_Industrial_%26_Technological_Museum%29.jpg",
   },
   {
     link: "#",
@@ -154,17 +204,34 @@ export default function WorksSection() {
     <section id="works" className="works-section" ref={sectionRef}>
       <h2>Recent Works</h2>
       <div ref={worksRef} className="works-grid">
-        {works.map((work) => (
-          <div
-            key={work.id}
-            className={`work-card work-${work.type.toLowerCase()}`}
-          >
-            <div className="work-type">{work.type}</div>
-            <h4>{work.title}</h4>
-            <p>{work.description}</p>
-            <span className="work-year">{work.year}</span>
-          </div>
-        ))}
+        {works.map((work) => {
+          const cardContent = (
+            <>
+              <div className="work-type">{work.type}</div>
+              <h4>{work.title}</h4>
+              <p>{work.authors}</p>
+              <span className="work-year">{work.publication}</span>
+            </>
+          );
+
+          return work.link ? (
+            <a
+              key={work.id}
+              href={work.link}
+              target="_blank"
+              className={`work-card work-${work.type.toLowerCase()}`}
+            >
+              {cardContent}
+            </a>
+          ) : (
+            <div
+              key={work.id}
+              className={`work-card work-${work.type.toLowerCase()}`}
+            >
+              {cardContent}
+            </div>
+          );
+        })}
       </div>
 
       <h2 style={{ marginTop: "80px" }}>Fellowships Elected</h2>
