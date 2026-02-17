@@ -17,7 +17,18 @@ function App() {
   const locomotiveRef = useRef<LocomotiveScroll | null>(null);
 
   useEffect(() => {
-    if (!scrollRef.current || locomotiveRef.current) return;
+    const isTouch =
+      window.matchMedia("(pointer: coarse)").matches ||
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0;
+
+    if (isTouch) {
+      document.body.classList.add("touch-scroll");
+    } else {
+      document.body.classList.remove("touch-scroll");
+    }
+
+    if (!scrollRef.current || locomotiveRef.current || isTouch) return;
 
     locomotiveRef.current = new LocomotiveScroll({
       lenisOptions: {
@@ -30,6 +41,7 @@ function App() {
     return () => {
       locomotiveRef.current?.destroy();
       locomotiveRef.current = null;
+      document.body.classList.remove("touch-scroll");
     };
   }, []);
 

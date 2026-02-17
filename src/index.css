@@ -30,6 +30,11 @@ body {
   overflow: hidden;
 }
 
+body.touch-scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 #root {
   width: 100%;
 }
@@ -38,6 +43,12 @@ body {
   height: 100vh;
   min-height: 100vh;
   overflow: hidden;
+}
+
+body.touch-scroll .scroll-container {
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
 }
 
 .scroll-content {
