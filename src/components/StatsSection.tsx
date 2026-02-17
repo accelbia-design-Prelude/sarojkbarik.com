@@ -90,6 +90,15 @@ export default function StatsSection() {
           <p className="stat-label">Citations</p>
         </div>
       </div>
+      {/* <a
+        className="stats-cta"
+        href="#works"
+        aria-disabled="true"
+        tabIndex={-1}
+        onClick={(e) => e.preventDefault()}
+      >
+        Explore Publications & Works
+      </a> */}
     </section>
   );
 }

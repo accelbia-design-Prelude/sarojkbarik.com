@@ -11,7 +11,7 @@ const works = [
       "Progress and Prospects of Cyanide Pollution Remediation Research–A Global Review",
     authors: "Gupta, A., Barik, S.K.* and Srivastava, P.K.",
     publication: "Water, Air, & Soil Pollution 237:200. IF: 3.0 (2026)",
-    link: "https://www.researchgate.net/publication/398598882_Progress_and_Prospects_of_Cyanide_Pollution_Remediation_Research-_A_Global_Review",
+    link: "https://link.springer.com/article/10.1007/s11270-025-08853-8",
   },
   {
     id: 2,
@@ -27,8 +27,16 @@ const works = [
     type: "Publication",
     title: "Measuring the Quality of Species List Contents",
     authors: "Pape, T., Pyle, R.L., Bánki, O., Barik, S.K., et al.",
-    publication: "BioScience, 1–15. IF: 8.4 (2026)",
-    link: "https://doi.org/10.1093/biosci/biaf191",
+    publication: "BioScience. IF: 8.4 (2026)",
+    link: "https://academic.oup.com/bioscience/advance-article/doi/10.1093/biosci/biaf191/8442886",
+  },
+  {
+    id: 4,
+    type: "Publication",
+    title: "Measuring the Quality of Species List Governance",
+    authors: "Stephen T. Garnett, Olaf Bánki, Saroj Kanta Barik, et al.",
+    publication: "BioScience. IF: 8.4 (2026)",
+    link: "https://academic.oup.com/bioscience/advance-article/doi/10.1093/biosci/biaf071/8443372",
   },
   {
     id: 5,
@@ -37,7 +45,7 @@ const works = [
       "Identification and characterization of Poitrasia circinans and Neoscirrhia matteucciicola associated with ginger in Meghalaya, India",
     authors: "Mohan, V., Joshi, S., Barik, S.K. and Joshi, S.R.",
     publication: "Discover Plants 3:31. IF: 8.4 (2026)",
-    link: "https://doi.org/10.1007/s44372-026-00499-y",
+    link: "https://link.springer.com/article/10.1007/s44372-026-00499-y",
   },
   {
     id: 6,
@@ -47,6 +55,7 @@ const works = [
     authors:
       "Misra, A., Chaudhary, M.K., Rawat, P., Khan, H., Srivastava, V., Singh, D., Barik, S.K. and Srivastava, S.",
     publication: "Fitoterapia 185:106739. IF: 2.6 (2025)",
+    link: "https://pubmed.ncbi.nlm.nih.gov/40675268/",
   },
   {
     id: 7,
@@ -56,6 +65,7 @@ const works = [
     authors:
       "Mangral, Z.A., Islam, S.U., Majeed, A., Tariq, L., Goel, S., Barik, S.K., and Dar, T.U.H.",
     publication: "Physiologia Plantarum 177(4): e70419. IF: 3.6 (2025)",
+    link: "https://onlinelibrary.wiley.com/doi/10.1111/ppl.70419",
   },
   {
     id: 8,
@@ -65,7 +75,7 @@ const works = [
     authors:
       "Sorokhaibam, S.S., Jhajhariya, M., Baishya, R., Barik, S.K., Goel, S. and Tandon, R.",
     publication: "The Nucleus. IF: 2.6 (2025)",
-    link: "https://doi.org/10.1007/s13237-025-0059",
+    link: "https://link.springer.com/article/10.1007/s13237-025-00595-6",
   },
   {
     id: 9,
@@ -75,6 +85,7 @@ const works = [
     authors:
       "Gupta, A., Naseem, M., Gupta, E., Srivastava, P.K. and Barik, S.K.",
     publication: "ENGINEERING Environment 19(10):137. IF: 6.4 (2025)",
+    link: "https://link.springer.com/article/10.1007/s11783-025-2057-9",
   },
   {
     id: 10,
@@ -84,7 +95,7 @@ const works = [
     authors:
       "Misra, A., Rawat, P., Khan, H., Srivastava, V., Singh, D., Barik, S.K. and Srivastava, S.",
     publication: "Phytochemistry Letters 69:103525. IF: 1.4 (2025)",
-    link: "https://doi.org/10.1016/j.phytol.2025.103525",
+    link: "https://www.sciencedirect.com/science/article/abs/pii/S1874390025016179?via%3Dihub",
   },
 ];
 

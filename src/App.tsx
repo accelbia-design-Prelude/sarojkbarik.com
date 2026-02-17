@@ -42,10 +42,10 @@ function App() {
             <HeroSection />
           </div>
           <div data-scroll-section>
-            <StatsSection />
+            <VideosSection />
           </div>
           <div data-scroll-section>
-            <VideosSection />
+            <StatsSection />
           </div>
           <div data-scroll-section>
             <WorksSection />

@@ -48,6 +48,25 @@
   color: var(--accent-color);
 }
 
+.stats-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.stats-cta:hover {
+  color: var(--neutral-color);
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
 .awards-section {
   width: 100%;
   max-width: 1200px;
