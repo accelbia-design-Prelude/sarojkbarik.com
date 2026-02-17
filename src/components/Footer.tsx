@@ -1,3 +1,4 @@
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import "../styles/Footer.css";
 
 export default function Footer() {
@@ -59,7 +60,8 @@ export default function Footer() {
               <div className="footer-block">
                 <h3>Address</h3>
                 <p>
-                  Department of Botany, North-Eastern Hill University,
+                  Department of Botany, <br />
+                  North-Eastern Hill University,
                   <br />
                   Shillong 793022, Meghalaya, India
                 </p>
@@ -96,7 +98,7 @@ export default function Footer() {
         </div>
         <div className="footer-meta">
           <p>&copy; {currentYear} Saroj Kanta Barik. All rights reserved.</p>
-          {/* <p className="footer-credit">
+          <p className="footer-credit">
             Site designed by{" "}
             <a
               href="https://accelbia.design"
@@ -109,7 +111,7 @@ export default function Footer() {
             <span className="footer-credit-icon" aria-hidden="true">
               <OpenInNewIcon fontSize="inherit" />
             </span>
-          </p> */}
+          </p>
         </div>
       </div>
     </footer>
