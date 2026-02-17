@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "../styles/HerbariumSection.css";
 
@@ -10,6 +10,8 @@ const specimens = [
     year: 2021,
     description:
       "New grass species (Poaceae, Aveninae) described from the Western Himalaya.",
+    image: "./trisetopsis_himalayensis.png",
+    link: "https://doi.org/10.1111%2Fnjb.03390",
   },
   {
     id: 2,
@@ -17,6 +19,8 @@ const specimens = [
     location: "Pindari Valley, Western Himalaya",
     year: 2021,
     description: "New Anemone species identified from the Pindari Valley.",
+    link: "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.516.3.8",
+    image: "./Anemone_per.jpg",
   },
   {
     id: 3,
@@ -24,6 +28,8 @@ const specimens = [
     location: "Sikkim, Eastern Himalaya",
     year: 2021,
     description: "New Aconitum species described from Sikkim.",
+    link: "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.484.2.5",
+    image: "./Aconitum_sikkimensis.png",
   },
   {
     id: 4,
@@ -31,14 +37,8 @@ const specimens = [
     location: "Arunachal Pradesh",
     year: 2020,
     description: "New Aconitum species documented from Arunachal Pradesh.",
-  },
-  {
-    id: 5,
-    name: "Aconitum sp. (Eastern Himalaya)",
-    location: "Eastern Himalaya",
-    year: 2019,
-    description:
-      "Another new Aconitum species recorded from the Eastern Himalaya.",
+    link: "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.440.3.5",
+    image: "./Aconitum_haridasanii.png",
   },
   {
     id: 6,
@@ -47,6 +47,8 @@ const specimens = [
     year: 2019,
     description:
       "New fern species (Thelypteridaceae) described from North-East India.",
+    link: "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.397.3.4",
+    image: "./Christella.jpeg",
   },
   {
     id: 7,
@@ -54,6 +56,7 @@ const specimens = [
     location: "Himalaya",
     year: 2018,
     description: "New Pedicularis species in series Curvipes (Orobanchaceae).",
+    link: "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.371.4.3",
   },
   {
     id: 8,
@@ -62,12 +65,13 @@ const specimens = [
     year: 2020,
     description:
       "Nomenclature and typification resolved for Swertia angustifolia and infraspecific taxa.",
+    link: "https://www.researchgate.net/publication/343642843_Nomenclature_and_typification_of_Swertia_angustifolia_Gentianaceae_its_infraspecific_taxa_and_synonyms",
+    image: "./swertia.jpeg",
   },
 ];
 
 export default function HerbariumSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [selectedId, setSelectedId] = useState<number | null>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -99,27 +103,33 @@ export default function HerbariumSection() {
       <h2>Interactive Herbarium</h2>
       <div ref={galleryRef} className="herbarium-grid">
         {specimens.map((specimen) => (
-          <div
+          <a
             key={specimen.id}
-            className={`herbarium-card ${selectedId === specimen.id ? "active" : ""}`}
-            onClick={() =>
-              setSelectedId(selectedId === specimen.id ? null : specimen.id)
-            }
+            className="herbarium-card"
+            href={specimen.link}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div className="plant-image">
-              <div className="image-placeholder">🌿</div>
+              {specimen.image ? (
+                <img
+                  src={specimen.image}
+                  alt={specimen.name}
+                  style={{
+                    filter: "grayscale(100%)",
+                    opacity: 1,
+                  }}
+                />
+              ) : (
+                <div className="image-placeholder">No Image</div>
+              )}
             </div>
             <div className="card-content">
               <h4>{specimen.name}</h4>
               <p className="location">{specimen.location}</p>
               <p className="year">{specimen.year}</p>
-              {selectedId === specimen.id && (
-                <div className="expanded-info">
-                  <p>{specimen.description}</p>
-                </div>
-              )}
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

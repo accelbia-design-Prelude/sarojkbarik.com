@@ -58,15 +58,16 @@
 }
 
 .hero-subtitle {
-  font-family: "Courier New", monospace;
-  font-size: 1.2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
   color: var(black);
   margin: 0;
   position: absolute;
   bottom: 4rem;
   left: 4rem;
   letter-spacing: 0.05em;
-  font-weight: 700;
+  font-weight: 300;
+  text-transform: lowercase;
 }
 
 .hero-right {
