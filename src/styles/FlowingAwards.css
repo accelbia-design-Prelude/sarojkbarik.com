@@ -97,3 +97,29 @@
   background-size: cover;
   background-position: 50% 50%;
 }
+
+@media (max-width: 768px) {
+  .menu__item-link {
+    font-size: 3vh;
+  }
+
+  .marquee span {
+    font-size: 3vh;
+  }
+
+  .marquee__img {
+    width: 120px;
+    height: 5vh;
+    margin: 1.2em 2vw;
+  }
+
+  /* On small screens use the marquee (no hover); hide static label */
+  .menu__item-link {
+    visibility: hidden;
+  }
+
+  .marquee {
+    transform: translate3d(0, 0, 0);
+    pointer-events: auto;
+  }
+}

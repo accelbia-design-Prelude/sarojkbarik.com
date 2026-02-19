@@ -26,6 +26,7 @@ interface MenuItemProps extends MenuItemData {
   marqueeTextColor: string;
   borderColor: string;
   isFirst: boolean;
+  idx: number;
 }
 
 const FlowingMenu: React.FC<FlowingMenuProps> = ({
@@ -50,6 +51,7 @@ const FlowingMenu: React.FC<FlowingMenuProps> = ({
             marqueeTextColor={marqueeTextColor}
             borderColor={borderColor}
             isFirst={idx === 0}
+            idx={idx}
           />
         ))}
       </nav>
@@ -67,6 +69,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
   marqueeTextColor,
   borderColor,
   isFirst,
+  idx,
 }) => {
   const itemRef = useRef<HTMLDivElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
@@ -125,9 +128,18 @@ const MenuItem: React.FC<MenuItemProps> = ({
         animationRef.current.kill();
       }
 
+      // compute duration so that all marquees move at the same visual speed
+      // interpret `speed` as seconds to traverse the viewport width
+      const viewportWidth =
+        window.innerWidth || document.documentElement.clientWidth;
+      const duration = (contentWidth * speed) / Math.max(1, viewportWidth);
+
+      // alternate direction per index: even -> left, odd -> right
+      const dir = idx % 2 === 0 ? -1 : 1;
+
       animationRef.current = gsap.to(marqueeInnerRef.current, {
-        x: -contentWidth,
-        duration: speed,
+        x: dir * contentWidth,
+        duration,
         ease: "none",
         repeat: -1,
       });
@@ -141,6 +153,22 @@ const MenuItem: React.FC<MenuItemProps> = ({
       }
     };
   }, [text, image, repetitions, speed]);
+
+  // Ensure marquee is visible on touch / small screens (no hover available)
+  useEffect(() => {
+    const isTouch =
+      window.matchMedia("(pointer: coarse)").matches ||
+      "ontouchstart" in window ||
+      (navigator as any).maxTouchPoints > 0 ||
+      window.innerWidth <= 768;
+
+    if (isTouch && marqueeRef.current && marqueeInnerRef.current) {
+      // bring marquee into view
+      marqueeRef.current.style.transform = "translate3d(0,0,0)";
+      marqueeRef.current.style.pointerEvents = "auto";
+      marqueeInnerRef.current.style.transform = "translate3d(0,0,0)";
+    }
+  }, []);
 
   const handleMouseEnter = (ev: React.MouseEvent<HTMLAnchorElement>) => {
     if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current)
