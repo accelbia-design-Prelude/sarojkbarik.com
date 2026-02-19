@@ -22,7 +22,7 @@ export const StickyMenuBox = () => {
           position: "fixed",
           top: 0,
           right: 0,
-          zIndex: 1300,
+          zIndex: 1400,
           backgroundColor: "var(--neutral-color)",
           display: "flex",
           alignItems: "center",

@@ -1,6 +1,7 @@
-import { Box, Drawer, Link } from "@mui/material";
+import { Box, Drawer, Link, IconButton } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
+import CloseIcon from "@mui/icons-material/Close";
 import EmailIcon from "@mui/icons-material/Email";
 
 interface MenuDrawerProps {
@@ -46,6 +47,7 @@ export const MenuDrawer = ({ isOpen, onClose }: MenuDrawerProps) => {
       onClose={onClose}
       sx={{
         "& .MuiDrawer-paper": {
+          position: "fixed",
           backgroundColor: "var(--primary-color)",
           width: { xs: "100%", sm: "400px", md: "450px" },
           display: "flex",
@@ -54,6 +56,19 @@ export const MenuDrawer = ({ isOpen, onClose }: MenuDrawerProps) => {
         },
       }}
     >
+      <IconButton
+        onClick={onClose}
+        aria-label="Close menu"
+        sx={{
+          position: "absolute",
+          top: 12,
+          right: 12,
+          color: "var(--neutral-color)",
+          zIndex: 1600,
+        }}
+      >
+        <CloseIcon sx={{ fontSize: 28 }} />
+      </IconButton>
       <Box
         sx={{
           flex: 1,
