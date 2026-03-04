@@ -66,7 +66,14 @@ export default function StatsSection() {
   }, []);
 
   return (
-    <section id="stats" className="stats-section" ref={sectionRef}>
+    <section
+      id="stats"
+      className="stats-section"
+      ref={sectionRef}
+      style={{
+        backgroundColor: "white",
+      }}
+    >
       <div ref={statsRef} className="stats-container">
         <div className="stat-item">
           <h2 className="stat-number">

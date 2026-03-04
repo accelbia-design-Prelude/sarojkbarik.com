@@ -39,15 +39,6 @@ const works = [
     link: "https://academic.oup.com/bioscience/advance-article/doi/10.1093/biosci/biaf071/8443372",
   },
   {
-    id: 5,
-    type: "Publication",
-    title:
-      "Identification and characterization of Poitrasia circinans and Neoscirrhia matteucciicola associated with ginger in Meghalaya, India",
-    authors: "Mohan, V., Joshi, S., Barik, S.K. and Joshi, S.R.",
-    publication: "Discover Plants 3:31. IF: 8.4 (2026)",
-    link: "https://link.springer.com/article/10.1007/s44372-026-00499-y",
-  },
-  {
     id: 6,
     type: "Publication",
     title:

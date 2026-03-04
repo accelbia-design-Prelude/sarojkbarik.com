@@ -30,7 +30,7 @@
 
 .stat-number {
   font-size: 3rem;
-  color: var(--theme-color);
+  color: black;
   margin: 0;
   font-weight: bold;
   font-variant-numeric: tabular-nums;
@@ -39,13 +39,14 @@
 
 .stat-label {
   font-size: 1rem;
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
+  color: black;
   margin: 0;
   text-transform: uppercase;
 }
 
 .stat-suffix {
-  color: var(--accent-color);
+  color: var(--theme-color);
 }
 
 .stats-cta {
