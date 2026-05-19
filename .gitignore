@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Premiere
+Adobe Premiere Pro Auto-Save
+*.prin
+*.prproj

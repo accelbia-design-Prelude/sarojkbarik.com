@@ -5,18 +5,9 @@ import "../styles/HeroSection.css";
 
 gsap.registerPlugin(SplitText);
 
-declare global {
-  interface Window {
-    VANTA?: {
-      CELLS: (options: object) => object;
-    };
-  }
-}
-
 export default function HeroSection() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const vantaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Animate title with SplitText - animate each div as lines with height mask
@@ -42,40 +33,6 @@ export default function HeroSection() {
     }
   }, []);
 
-  useEffect(() => {
-    // Wait for Vanta to load
-    const initVanta = () => {
-      if (window.VANTA && vantaRef.current) {
-        try {
-          window.VANTA.CELLS({
-            el: vantaRef.current,
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200,
-            minWidth: 200,
-            scale: 1,
-            color1: 0x34a053,
-            color2: 0xc5c58a,
-            size: 1,
-          });
-        } catch (e) {
-          console.error("Vanta initialization error:", e);
-        }
-      } else if (!window.VANTA) {
-        // Retry if VANTA not loaded yet
-        setTimeout(initVanta, 100);
-      }
-    };
-
-    // Start initialization with a small delay to ensure scripts are loaded
-    const timer = setTimeout(initVanta, 100);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
   return (
     <section id="hero" className="hero">
       <div className="hero-content">
@@ -91,7 +48,13 @@ export default function HeroSection() {
           </p>
         </div>
         <div className="hero-right">
-          <div className="vanta-frame" ref={vantaRef}></div>
+          <video
+            className="background-video"
+            src="/public/BGV.MOV"
+            autoPlay
+            loop
+            muted
+          ></video>
         </div>
       </div>
     </section>
