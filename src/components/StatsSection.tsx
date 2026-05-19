@@ -1,111 +1,100 @@
-import { useEffect, useRef } from "react";
-import { CountUp } from "countup.js";
-import gsap from "gsap";
-import "../styles/StatsSection.css";
+import { useEffect, useRef, useState } from "react";
 
+/** Eased count-up. Idle until `run` flips true. */
+function useCountUp(target: number, run: boolean, dur = 1600): number {
+  const [val, setVal] = useState(0);
+  useEffect(() => {
+    if (!run) return;
+    let raf = 0;
+    let start = 0;
+    const step = (t: number) => {
+      if (!start) start = t;
+      const p = Math.min(1, (t - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setVal(Math.round(target * eased));
+      if (p < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [target, run, dur]);
+  return val;
+}
+
+/** Bio strip — short editorial blurb + four stat counters. */
 export default function StatsSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
-  const publicationsRef = useRef<HTMLSpanElement>(null);
-  const experienceRef = useRef<HTMLSpanElement>(null);
-  const citationsRef = useRef<HTMLSpanElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const [seen, setSeen] = useState(false);
 
   useEffect(() => {
-    const observerOptions = {
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      const [entry] = entries;
-      if (!entry?.isIntersecting) return;
-
-      if (statsRef.current) {
-        gsap.from(statsRef.current, {
-          opacity: 0,
-          y: 50,
-          duration: 0.8,
-          ease: "power3.out",
-        });
-      }
-
-      if (publicationsRef.current) {
-        const countUp = new CountUp(publicationsRef.current, 190, {
-          duration: 2,
-        });
-        if (!countUp.error) {
-          countUp.start();
+    if (!ref.current) return;
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setSeen(true);
+          io.disconnect();
         }
-      }
-
-      if (experienceRef.current) {
-        const countUp = new CountUp(experienceRef.current, 35, {
-          duration: 2,
-        });
-        if (!countUp.error) {
-          countUp.start();
-        }
-      }
-
-      if (citationsRef.current) {
-        const countUp = new CountUp(citationsRef.current, 5000, {
-          duration: 2.5,
-        });
-        if (!countUp.error) {
-          countUp.start();
-        }
-      }
-
-      observer.unobserve(sectionRef.current!);
-    }, observerOptions);
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
+      },
+      { threshold: 0.35 },
+    );
+    io.observe(ref.current);
+    return () => io.disconnect();
   }, []);
 
+  const pubs = useCountUp(200, seen);
+  const cites = useCountUp(5405, seen);
+  const yrs = useCountUp(35, seen);
+  const taxa = useCountUp(8, seen);
+
   return (
-    <section
-      id="stats"
-      className="stats-section"
-      ref={sectionRef}
-      style={{
-        backgroundColor: "white",
-      }}
-    >
-      <div ref={statsRef} className="stats-container">
-        <div className="stat-item">
-          <h2 className="stat-number">
-            <span ref={publicationsRef}>0</span>
-            <span className="stat-suffix">+</span>
-          </h2>
-          <p className="stat-label">Publications</p>
+    <section id="stats">
+      <div className="biostrip" ref={ref}>
+        <p className="biostrip-lead">
+          A botanist with a <em>fieldwork-first</em> practice — describing new
+          Himalayan species, modelling ecosystem services and building the
+          institutional scaffolding for Indian plant science.
+        </p>
+        <div className="stat">
+          <div className="num">
+            {pubs}
+            <sup>+</sup>
+          </div>
+          <div className="lbl">
+            Peer-reviewed
+            <br />
+            publications
+          </div>
         </div>
-        <div className="stat-item">
-          <h2 className="stat-number">
-            <span ref={experienceRef}>0</span>
-            <span className="stat-suffix">+</span>
-          </h2>
-          <p className="stat-label">Years of Research Experience</p>
+        <div className="stat">
+          <div className="num">
+            {cites.toLocaleString()}
+            <sup>+</sup>
+          </div>
+          <div className="lbl">
+            Career
+            <br />
+            citations
+          </div>
         </div>
-        <div className="stat-item">
-          <h2 className="stat-number">
-            <span ref={citationsRef}>0</span>
-            <span className="stat-suffix">+</span>
-          </h2>
-          <p className="stat-label">Citations</p>
+        <div className="stat">
+          <div className="num">
+            {yrs}
+            <sup>+</sup>
+          </div>
+          <div className="lbl">
+            Years of
+            <br />
+            research
+          </div>
+        </div>
+        <div className="stat">
+          <div className="num">{taxa}</div>
+          <div className="lbl">
+            New species
+            <br />
+            described
+          </div>
         </div>
       </div>
-      {/* <a
-        className="stats-cta"
-        href="#works"
-        aria-disabled="true"
-        tabIndex={-1}
-        onClick={(e) => e.preventDefault()}
-      >
-        Explore Publications & Works
-      </a> */}
     </section>
   );
 }
