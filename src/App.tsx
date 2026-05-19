@@ -41,8 +41,6 @@ function useActiveSection() {
 }
 
 function App() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
   const locomotiveRef = useRef<LocomotiveScroll | null>(null);
 
   useEffect(() => {
@@ -57,12 +55,10 @@ function App() {
       document.body.classList.remove("touch-scroll");
     }
 
-    if (!scrollRef.current || locomotiveRef.current || isTouch) return;
+    if (locomotiveRef.current || isTouch) return;
 
     locomotiveRef.current = new LocomotiveScroll({
       lenisOptions: {
-        wrapper: scrollRef.current,
-        content: contentRef.current ?? scrollRef.current,
         lerp: 0.08,
       },
     });
@@ -90,8 +86,8 @@ function App() {
       <Topbar active={active} onJump={onJump} />
       <Rail active={active} onJump={onJump} />
 
-      <div className="scroll-container" data-scroll-container ref={scrollRef}>
-        <div className="scroll-content" ref={contentRef}>
+      <div className="scroll-container" data-scroll-container>
+        <div className="scroll-content">
           <div data-scroll-section>
             <HeroSection />
           </div>
