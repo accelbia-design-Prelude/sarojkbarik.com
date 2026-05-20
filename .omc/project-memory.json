@@ -1,0 +1,287 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779218457812,
+  "projectRoot": "/Users/accelbia/Projects/sarojkbarik.com",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.2.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.0",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "7.3.1",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc -b && vite build",
+      "lint": "eslint .",
+      "preview": "vite preview",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d dist"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "src"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "Adobe Premiere Pro Auto-Save": {
+      "path": "Adobe Premiere Pro Auto-Save",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1779218457800,
+      "keyFiles": [
+        "BG Video--8d40695a-3c9e-be6c-2748-1bd7faf5944d-2026-05-19_22-23-06.prproj",
+        "BG Video--8d40695a-3c9e-be6c-2748-1bd7faf5944d-2026-05-19_22-29-06.prproj",
+        "BG Video--8d40695a-3c9e-be6c-2748-1bd7faf5944d-2026-05-19_22-35-13.prproj"
+      ]
+    },
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 17,
+      "lastAccessed": 1779218457801,
+      "keyFiles": [
+        "Aconitum_haridasanii.png",
+        "Aconitum_sikkimensis.png",
+        "Anemone_ped.png",
+        "BGV.MOV",
+        "CNAME"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 15,
+      "lastAccessed": 1779218457801,
+      "keyFiles": [
+        "Aconitum_haridasanii.png",
+        "Aconitum_sikkimensis.png",
+        "Anemone_ped.png",
+        "CNAME",
+        "Christella.jpeg"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 5,
+      "lastAccessed": 1779218457801,
+      "keyFiles": [
+        "App.css",
+        "App.tsx",
+        "index.css",
+        "main.tsx"
+      ]
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 2,
+      "lastAccessed": 1779218457802,
+      "keyFiles": [
+        "index-BZ_z4qR2.css",
+        "index-W3XBUqRw.js"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 11,
+      "lastAccessed": 1779218457802,
+      "keyFiles": [
+        "ConnectSection.tsx",
+        "Footer.tsx",
+        "HerbariumSection.tsx"
+      ]
+    },
+    "src/data": {
+      "path": "src/data",
+      "purpose": "Data files",
+      "fileCount": 1,
+      "lastAccessed": 1779218457802,
+      "keyFiles": [
+        "site.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "index.html",
+      "accessCount": 8,
+      "lastAccessed": 1779221178222,
+      "type": "file"
+    },
+    {
+      "path": "src/components/HeroSection.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1779311859077,
+      "type": "file"
+    },
+    {
+      "path": "src/styles/CommonStyles.css",
+      "accessCount": 6,
+      "lastAccessed": 1779312791059,
+      "type": "file"
+    },
+    {
+      "path": "src/components/HerbariumSection.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1779311808366,
+      "type": "file"
+    },
+    {
+      "path": "src/data/site.ts",
+      "accessCount": 5,
+      "lastAccessed": 1779311873376,
+      "type": "file"
+    },
+    {
+      "path": "src/components/StatsSection.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1779311889016,
+      "type": "file"
+    },
+    {
+      "path": "public/sitemap.xml",
+      "accessCount": 4,
+      "lastAccessed": 1779221087192,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Honours.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1779312007272,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 3,
+      "lastAccessed": 1779220555221,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 3,
+      "lastAccessed": 1779220555379,
+      "type": "file"
+    },
+    {
+      "path": "src/App.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779220560394,
+      "type": "file"
+    },
+    {
+      "path": "src/components/WorksSection.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779220560703,
+      "type": "file"
+    },
+    {
+      "path": "src/main.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779220693563,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ConnectSection.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779311862183,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Topbar.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779312113410,
+      "type": "file"
+    },
+    {
+      "path": "public/robots.txt",
+      "accessCount": 2,
+      "lastAccessed": 1779220554843,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1779222141061,
+      "type": "file"
+    },
+    {
+      "path": "src/components/VideosSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1779220459837,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1779220467608,
+      "type": "file"
+    },
+    {
+      "path": "src/components/SectionHead.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1779221047951,
+      "type": "file"
+    },
+    {
+      "path": "public/404.html",
+      "accessCount": 1,
+      "lastAccessed": 1779311814172,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

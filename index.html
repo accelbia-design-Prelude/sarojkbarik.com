@@ -2,62 +2,520 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/logo-light.svg"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/logo-dark.svg"
-      media="(prefers-color-scheme: dark)"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Prof. Saroj K Barik | Ecology, Biodiversity, and Environmental Science
-    </title>
+    <meta name="theme-color" content="#13231e" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Primary —————————————————————————————————————————— -->
+    <title>Prof. Saroj Kanta Barik | Indian Botanist · Plant Ecologist · CSIR-NBRI</title>
     <meta
       name="description"
-      content="An Indian botanist, ecologist, environmental scientist, and scientific & academic administrator specializing in plant ecology, biodiversity conservation, environmental biology and bioprospection."
+      content="Prof. Saroj Kanta Barik — Indian botanist and plant ecologist. Dean at NEHU Shillong; former Director of CSIR-NBRI Lucknow. 200+ papers on Himalayan botany, biodiversity conservation India, and bioprospection."
     />
+    <meta
+      name="keywords"
+      content="Saroj Kanta Barik, Saroj K Barik, S K Barik, plant ecology, biodiversity, Himalaya, botany, taxonomy, herbarium, NEHU, CSIR-NBRI, Indian botanist, botanist CSIR-NBRI, plant ecologist India, Himalayan botany, biodiversity conservation India scientist, top botanists India, new plant species Himalaya, new species, bioprospection, biodiversity conservation"
+    />
+    <meta name="author" content="Saroj Kanta Barik" />
+    <link rel="canonical" href="https://sarojkbarik.com/" />
 
+    <!-- Favicons —————————————————————————————————————————— -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)" />
+    <link rel="alternate icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/favicon.svg" color="#13231e" />
+
+    <!-- Open Graph —————————————————————————————————————— -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="sarojkbarik.com" />
     <meta property="og:url" content="https://sarojkbarik.com/" />
-    <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Prof. Saroj K Barik | Ecology, Biodiversity, and Environmental Science"
+      content="Prof. Saroj Kanta Barik — Botanist · Ecologist"
     />
     <meta
       property="og:description"
-      content="An Indian botanist, ecologist, environmental scientist, and scientific & academic administrator specializing in plant ecology, biodiversity conservation, environmental biology and bioprospection."
+      content="Dean, School of Life Sciences at NEHU Shillong. 200+ peer-reviewed papers across plant ecology, biodiversity conservation and bioprospection. Eight new Himalayan species described."
     />
-    <meta
-      property="og:image"
-      content="https://sarojkbarik.com/opengraph-image.png"
-    />
+    <meta property="og:image" content="https://sarojkbarik.com/opengraph-image.png" />
+    <meta property="og:image:secure_url" content="https://sarojkbarik.com/opengraph-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Prof. Saroj Kanta Barik — Field Journal. A herbarium plate of Trisetopsis himalayensis collected from the Maitoli Glacier, Uttarakhand, 2,560 m, 2021." />
+    <meta property="profile:first_name" content="Saroj" />
+    <meta property="profile:last_name" content="Barik" />
 
+    <!-- Twitter / X ——————————————————————————————————— -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@sarojkbarik" />
+    <meta name="twitter:creator" content="@sarojkbarik" />
     <meta property="twitter:domain" content="sarojkbarik.com" />
     <meta property="twitter:url" content="https://sarojkbarik.com/" />
     <meta
       name="twitter:title"
-      content="Prof. Saroj K Barik | Ecology, Biodiversity, and Environmental Science"
+      content="Prof. Saroj Kanta Barik — Botanist · Ecologist"
     />
     <meta
       name="twitter:description"
-      content="An Indian botanist, ecologist, environmental scientist, and scientific & academic administrator specializing in plant ecology, biodiversity conservation, environmental biology and bioprospection."
+      content="Dean, School of Life Sciences at NEHU Shillong. 200+ peer-reviewed papers; eight new Himalayan species described."
     />
-    <meta
-      name="twitter:image"
-      content="https://sarojkbarik.com/opengraph-image.png"
-    />
-    <script src="/three.r134.min.js"></script>
-    <script src="/vanta.cells.min.js"></script>
+    <meta name="twitter:image" content="https://sarojkbarik.com/opengraph-image.png" />
+    <meta name="twitter:image:alt" content="Prof. Saroj Kanta Barik — Field Journal, with a herbarium plate of Trisetopsis himalayensis." />
+
+    <!-- Crawlers —————————————————————————————————————— -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Structured data — schema.org Person ———————————————— -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://sarojkbarik.com/#person",
+      "name": "Saroj Kanta Barik",
+      "givenName": "Saroj",
+      "familyName": "Barik",
+      "additionalName": "Kanta",
+      "honorificPrefix": "Prof.",
+      "honorificSuffix": "FNA, FASc, FNAAS, FLS, FNASc",
+      "alternateName": ["S. K. Barik", "Saroj K Barik"],
+      "url": "https://sarojkbarik.com/",
+      "image": "https://sarojkbarik.com/opengraph-image.png",
+      "birthDate": "1965-04-12",
+      "birthPlace": {
+        "@type": "Place",
+        "name": "Gourpur, Remuna, Balasore, Odisha, India"
+      },
+      "nationality": { "@type": "Country", "name": "India" },
+      "gender": "Male",
+      "jobTitle": "Dean, School of Life Sciences; Professor of Botany",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "North-Eastern Hill University",
+        "url": "https://nehu.ac.in",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Department of Botany, NEHU",
+          "addressLocality": "Shillong",
+          "postalCode": "793022",
+          "addressRegion": "Meghalaya",
+          "addressCountry": "IN"
+        }
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Utkal University" },
+        { "@type": "CollegeOrUniversity", "name": "Berhampur University" },
+        { "@type": "CollegeOrUniversity", "name": "North-Eastern Hill University" }
+      ],
+      "knowsAbout": [
+        "Plant ecology",
+        "Biodiversity conservation",
+        "Bioprospection",
+        "Environmental biology",
+        "Taxonomic botany",
+        "Herbarium science",
+        "Himalayan flora",
+        "Forest ecology"
+      ],
+      "award": [
+        "Fellow, Indian National Science Academy (FNA, 2024)",
+        "Fellow, Indian Academy of Sciences (FASc, 2025)",
+        "Fellow, National Academy of Agricultural Sciences (FNAAS, 2020)",
+        "Fellow, The Linnean Society of London (FLS, 2020)",
+        "Fellow, National Academy of Sciences, India (FNASc, 2018)",
+        "Prof. Birbal Sahni Medal, Indian Botanical Society (2019)",
+        "Samanta Chandra Sekhar Award, Govt of Odisha (2020)",
+        "Prof. R.N. Tandon Memorial Award, NASI (2020)",
+        "Dr. Brandis Award, The Indian Forester (2009)"
+      ],
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/Saroj_Kanta_Barik",
+        "https://scholar.google.co.in/citations?user=4ilAyWsAAAAJ",
+        "https://www.linkedin.com/in/saroj-barik-01448ba1/",
+        "https://x.com/sarojkbarik",
+        "https://orcid.org/0000-0002-1795-9539",
+        "https://www.researchgate.net/profile/Saroj-Barik-2"
+      ],
+      "email": "mailto:sarojkbarik@gmail.com",
+      "telephone": "+91-364-272-2216"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://sarojkbarik.com/#website",
+      "url": "https://sarojkbarik.com/",
+      "name": "Prof. Saroj Kanta Barik — Field Journal",
+      "description": "Plant ecology, biodiversity conservation and bioprospection from the Himalaya and north-east India.",
+      "inLanguage": "en-IN",
+      "publisher": { "@id": "https://sarojkbarik.com/#person" }
+    }
+    </script>
+
+    <!-- Structured data — schema.org ScholarlyArticle ——————————— -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Selected Publications of Saroj Kanta Barik",
+      "itemListElement": [
+        {
+          "@type": "ListItem", "position": 1,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://www.pnas.org/doi/10.1073/pnas.2306899120",
+            "headline": "Widespread Support for a Global Species List with a Formal Governance System",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2023",
+            "url": "https://www.pnas.org/doi/10.1073/pnas.2306899120",
+            "isPartOf": { "@type": "Periodical", "name": "Proceedings of the National Academy of Sciences", "issn": "0027-8424" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 2,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://link.springer.com/article/10.1007/s40725-023-00205-1",
+            "headline": "Forestry in the face of global change: results of a global survey of professionals",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2023",
+            "url": "https://link.springer.com/article/10.1007/s40725-023-00205-1",
+            "isPartOf": { "@type": "Periodical", "name": "Current Forestry Reports" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 3,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://academic.oup.com/bioscience/advance-article/doi/10.1093/biosci/biaf191/8442886",
+            "headline": "Measuring the Quality of Species List Contents",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2026",
+            "url": "https://academic.oup.com/bioscience/advance-article/doi/10.1093/biosci/biaf191/8442886",
+            "isPartOf": { "@type": "Periodical", "name": "BioScience" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 4,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://academic.oup.com/bioscience/advance-article/doi/10.1093/biosci/biaf071/8443372",
+            "headline": "Measuring the Quality of Species List Governance",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2026",
+            "url": "https://academic.oup.com/bioscience/advance-article/doi/10.1093/biosci/biaf071/8443372",
+            "isPartOf": { "@type": "Periodical", "name": "BioScience" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 5,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://www.sciencedirect.com/journal/biomass-and-bioenergy/vol/183",
+            "headline": "Forest carbon stock-based bioeconomy: mixed models improve accuracy of tree biomass estimates",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2024",
+            "url": "https://www.sciencedirect.com/journal/biomass-and-bioenergy/vol/183",
+            "isPartOf": { "@type": "Periodical", "name": "Biomass and Bioenergy" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 6,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://www.sciencedirect.com/journal/biomass-and-bioenergy/vol/182",
+            "headline": "Evaluating bioeconomic potential of Phyllostachys mannii Gamble and Chimonocalamus griffithianus from north-eastern India",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2024",
+            "url": "https://www.sciencedirect.com/journal/biomass-and-bioenergy/vol/182",
+            "isPartOf": { "@type": "Periodical", "name": "Biomass and Bioenergy" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 7,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://link.springer.com/article/10.1007/s42398-024-00326-8",
+            "headline": "Plant defence mechanism in honeydew-mediated plant–Hemiptera–ant interactions and ecosystem sustainability: a review",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2024",
+            "url": "https://link.springer.com/article/10.1007/s42398-024-00326-8",
+            "isPartOf": { "@type": "Periodical", "name": "Environmental Sustainability" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 8,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://link.springer.com/article/10.1007/s11783-025-2057-9",
+            "headline": "Metagenomic profiling of cyanide-degrading microbial communities in steel-industry wastewater",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2025",
+            "url": "https://link.springer.com/article/10.1007/s11783-025-2057-9",
+            "isPartOf": { "@type": "Periodical", "name": "Frontiers of Environmental Science & Engineering" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 9,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://onlinelibrary.wiley.com/doi/10.1111/ppl.70419",
+            "headline": "Transcriptomic insights into elevation-dependent gene expression in Rhododendron anthopogon D.Don",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2025",
+            "url": "https://onlinelibrary.wiley.com/doi/10.1111/ppl.70419",
+            "isPartOf": { "@type": "Periodical", "name": "Physiologia Plantarum" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 10,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://link.springer.com/article/10.1007/s13237-025-00595-6",
+            "headline": "Genetic diversity analysis of Rhododendron arboreum in western Himalaya indicates altitudinal population differentiation",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2025",
+            "url": "https://link.springer.com/article/10.1007/s13237-025-00595-6",
+            "isPartOf": { "@type": "Periodical", "name": "The Nucleus" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 11,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://link.springer.com/article/10.1007/s11270-025-08853-8",
+            "headline": "Progress and Prospects of Cyanide Pollution Remediation Research — A Global Review",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2026",
+            "url": "https://link.springer.com/article/10.1007/s11270-025-08853-8",
+            "isPartOf": { "@type": "Periodical", "name": "Water, Air, & Soil Pollution" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 12,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://pubmed.ncbi.nlm.nih.gov/40675268/",
+            "headline": "Evaluation of in-vivo anti-lithiatic activity of polyherbal formulation in ameliorating calcium oxalate kidney stones",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2025",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40675268/",
+            "isPartOf": { "@type": "Periodical", "name": "Fitoterapia" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 13,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://www.researchgate.net/publication/398598882_Three_hundred_years_history_of_Cyanide_use_in_industries_its_environmental_risks_and_mitigation_technologies",
+            "headline": "Three hundred years history of Cyanide use in industries, its environmental risks and mitigation technologies",
+            "author": [{ "@type": "Person", "@id": "https://sarojkbarik.com/#person" }],
+            "datePublished": "2026",
+            "url": "https://www.researchgate.net/publication/398598882_Three_hundred_years_history_of_Cyanide_use_in_industries_its_environmental_risks_and_mitigation_technologies",
+            "isPartOf": { "@type": "Periodical", "name": "Environmental Sustainability" }
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured data — schema.org Taxon (new species) ——————————— -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "New Plant Species Described by Saroj Kanta Barik",
+      "itemListElement": [
+        {
+          "@type": "ListItem", "position": 1,
+          "item": {
+            "@type": "Taxon",
+            "name": "Trisetopsis himalayensis",
+            "taxonRank": "species",
+            "parentTaxon": { "@type": "Taxon", "name": "Poaceae" },
+            "description": "New grass species in subtribe Aveninae described from Maitoli Glacier, Uttarakhand at 2,560 m elevation, 2021.",
+            "url": "https://doi.org/10.1111%2Fnjb.03390",
+            "creator": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 2,
+          "item": {
+            "@type": "Taxon",
+            "name": "Anemone pindariensis",
+            "taxonRank": "species",
+            "parentTaxon": { "@type": "Taxon", "name": "Ranunculaceae" },
+            "description": "New species described from Pindari Valley, Western Himalaya at 3,400 m elevation, 2021.",
+            "url": "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.516.3.8",
+            "creator": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 3,
+          "item": {
+            "@type": "Taxon",
+            "name": "Aconitum sikkimensis",
+            "taxonRank": "species",
+            "parentTaxon": { "@type": "Taxon", "name": "Ranunculaceae" },
+            "description": "New species in section Catenatae described from Sikkim, Eastern Himalaya at 3,200 m elevation, 2021.",
+            "url": "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.484.2.5",
+            "creator": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 4,
+          "item": {
+            "@type": "Taxon",
+            "name": "Aconitum haridasanii",
+            "taxonRank": "species",
+            "parentTaxon": { "@type": "Taxon", "name": "Ranunculaceae" },
+            "description": "New species described from Arunachal Pradesh at 3,800 m elevation, 2020.",
+            "url": "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.440.3.5",
+            "creator": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 5,
+          "item": {
+            "@type": "Taxon",
+            "name": "Aconitum tawangense",
+            "taxonRank": "species",
+            "parentTaxon": { "@type": "Taxon", "name": "Ranunculaceae" },
+            "description": "New species described from Tawang, Eastern Himalaya, Arunachal Pradesh at 4,100 m elevation, 2019.",
+            "url": "https://www.biotaxa.org/Phytotaxa/article/view/phytotaxa.413.1.6",
+            "creator": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 6,
+          "item": {
+            "@type": "Taxon",
+            "name": "Christella kendujharensis",
+            "taxonRank": "species",
+            "parentTaxon": { "@type": "Taxon", "name": "Thelypteridaceae" },
+            "description": "New fern species described from Kendujhar, Odisha at 650 m elevation, 2019.",
+            "url": "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.397.3.4",
+            "creator": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 7,
+          "item": {
+            "@type": "Taxon",
+            "name": "Pedicularis husainiana",
+            "taxonRank": "species",
+            "parentTaxon": { "@type": "Taxon", "name": "Orobanchaceae" },
+            "description": "Alpine meadow species in series Curvipes described from Western Himalaya at 3,600 m elevation, 2018.",
+            "url": "https://phytotaxa.mapress.com/pt/article/view/phytotaxa.371.4.3",
+            "creator": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+          }
+        },
+        {
+          "@type": "ListItem", "position": 8,
+          "item": {
+            "@type": "Taxon",
+            "name": "Swertia angustifolia",
+            "taxonRank": "species",
+            "parentTaxon": { "@type": "Taxon", "name": "Gentianaceae" },
+            "description": "Nomenclatural typification of taxa and synonyms from Trans-Himalaya, 2020.",
+            "url": "https://www.researchgate.net/publication/343642843",
+            "creator": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured data — schema.org VideoObject ——————————————— -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Ecosystem & Biodiversity — India's real wealth",
+        "description": "Prof. Saroj Kanta Barik, Indian botanist and plant ecologist, on ecosystem services and biodiversity conservation in India. RSTV Eureka, 2021.",
+        "thumbnailUrl": "https://img.youtube.com/vi/BIhugPrmM-4/hqdefault.jpg",
+        "uploadDate": "2021-01-01",
+        "embedUrl": "https://www.youtube.com/embed/BIhugPrmM-4",
+        "url": "https://www.youtube.com/watch?v=BIhugPrmM-4",
+        "author": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Address at the Rose & Gladiolus Flower Show",
+        "description": "Prof. Saroj Kanta Barik, Director CSIR-NBRI Lucknow, at the Rose & Gladiolus Flower Show, 2021.",
+        "thumbnailUrl": "https://img.youtube.com/vi/0rrk341nFLM/hqdefault.jpg",
+        "uploadDate": "2021-01-01",
+        "embedUrl": "https://www.youtube.com/embed/0rrk341nFLM",
+        "url": "https://www.youtube.com/watch?v=0rrk341nFLM",
+        "author": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Inaugural Ceremony of ICPEP-7",
+        "description": "Prof. Saroj Kanta Barik at the Inaugural Ceremony of ICPEP-7, CSIR-NBRI, November 30 2025.",
+        "thumbnailUrl": "https://img.youtube.com/vi/EDXI3E2Lqxk/hqdefault.jpg",
+        "uploadDate": "2025-11-30",
+        "embedUrl": "https://www.youtube.com/embed/EDXI3E2Lqxk",
+        "url": "https://www.youtube.com/watch?v=EDXI3E2Lqxk",
+        "author": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Biodiversity Conclave",
+        "description": "Prof. Saroj Kanta Barik at the Biodiversity Conclave, Ten News Live, 2022.",
+        "thumbnailUrl": "https://img.youtube.com/vi/hG0taakGjoA/hqdefault.jpg",
+        "uploadDate": "2022-01-01",
+        "embedUrl": "https://www.youtube.com/embed/hG0taakGjoA",
+        "url": "https://www.youtube.com/watch?v=hG0taakGjoA",
+        "author": { "@type": "Person", "@id": "https://sarojkbarik.com/#person" }
+      }
+    ]
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <div>
+        <h1>Prof. Saroj Kanta Barik — Indian Botanist and Plant Ecologist</h1>
+        <p>Professor of Botany and Dean, School of Life Sciences, North-Eastern Hill University (NEHU), Shillong.
+        Former Director, CSIR-National Botanical Research Institute (CSIR-NBRI), Lucknow.
+        Specialist in plant ecology, biodiversity conservation, Himalayan botany and bioprospection.
+        200+ peer-reviewed publications; 5,400+ citations; 8 new species described from the Himalaya and north-east India.</p>
+        <h2>New Species Described</h2>
+        <ul>
+          <li>Trisetopsis himalayensis — Poaceae — Maitoli Glacier, Uttarakhand, 2021</li>
+          <li>Anemone pindariensis — Ranunculaceae — Pindari Valley, 2021</li>
+          <li>Aconitum sikkimensis — Ranunculaceae — Sikkim, Eastern Himalaya, 2021</li>
+          <li>Aconitum haridasanii — Ranunculaceae — Arunachal Pradesh, 2020</li>
+          <li>Aconitum tawangense — Ranunculaceae — Tawang, Arunachal Pradesh, 2019</li>
+          <li>Christella kendujharensis — Thelypteridaceae — Kendujhar, Odisha, 2019</li>
+          <li>Pedicularis husainiana — Orobanchaceae — Western Himalaya, 2018</li>
+          <li>Swertia angustifolia — Gentianaceae — Trans-Himalaya, 2020</li>
+        </ul>
+        <h2>Fellowships</h2>
+        <ul>
+          <li>Fellow, Indian National Science Academy (FNA, 2024)</li>
+          <li>Fellow, Indian Academy of Sciences (FASc, 2025)</li>
+          <li>Fellow, The Linnean Society of London (FLS, 2020)</li>
+          <li>Fellow, National Academy of Sciences India (FNASc, 2018)</li>
+        </ul>
+        <h2>Recent Publications</h2>
+        <ul>
+          <li>Widespread Support for a Global Species List — PNAS 2023 (IF 11.1)</li>
+          <li>Measuring the Quality of Species List Governance — BioScience 2026 (IF 8.4)</li>
+          <li>Forestry in the face of global change — Current Forestry Reports 2023 (IF 8.6)</li>
+          <li>Forest carbon stock and bioeconomy — Biomass and Bioenergy 2024 (IF 5.8)</li>
+        </ul>
+      </div>
+    </noscript>
   </body>
 </html>

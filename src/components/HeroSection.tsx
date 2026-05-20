@@ -1,60 +1,130 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { SplitText } from "gsap/SplitText";
-import "../styles/HeroSection.css";
-
-gsap.registerPlugin(SplitText);
+import { useCallback, useEffect, useState } from "react";
+import { SPECIES } from "../data/site";
 
 export default function HeroSection() {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const [idx, setIdx] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const cur = SPECIES[idx];
+
+  const next = useCallback(() => setIdx((i) => (i + 1) % SPECIES.length), []);
+  const prev = useCallback(
+    () => setIdx((i) => (i - 1 + SPECIES.length) % SPECIES.length),
+    [],
+  );
 
   useEffect(() => {
-    // Animate title with SplitText - animate each div as lines with height mask
-    if (titleRef.current) {
-      const divs = titleRef.current.querySelectorAll("div");
+    if (isPaused) return;
+    const t = window.setInterval(next, 6500);
+    return () => window.clearInterval(t);
+  }, [next, isPaused]);
 
-      // Set initial state with overflow hidden on parent
-      titleRef.current.style.overflow = "hidden";
-
-      gsap.set(divs, {
-        height: 0,
-        y: 20,
-        opacity: 1,
-      });
-
-      gsap.to(divs, {
-        height: "auto",
-        y: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power2.out",
-      });
-    }
-  }, []);
+  const onJumpIndex = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById("index");
+    el?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section id="hero" className="hero">
-      <div className="hero-content">
-        <div className="hero-left">
-          <h1 ref={titleRef}>
-            <div className="prof">PROF.</div>
-            <div>SAROJ</div>
-            <div>KANTA</div>
-            <div>BARIK</div>
-          </h1>
-          <p ref={subtitleRef} className="hero-subtitle">
-            botanist and ecologist
-          </p>
+    <section id="top" className="hero">
+      <div className="hero-meta">
+        <span className="crosshair">b. 1965, Odisha · author abbrev. 'Barik'</span>
+        <span>25°34′N · 91°53′E · Shillong, Meghalaya</span>
+      </div>
+
+      <div className="hero-left">
+        <h1>
+          <span className="prof">Prof.</span>
+          <span className="ln">Saroj Kanta</span>
+          <span className="ln italic">Barik.</span>
+        </h1>
+        <h2 className="hero-role">
+          <span>Indian Botanist</span>
+          <span>Plant Ecologist</span>
+          <span>Biodiversity Conservation Scientist</span>
+        </h2>
+        <p className="hero-blurb">
+          A botanist, ecologist and academic administrator working across the
+          Himalaya and north-east India — on <em>plant ecology</em>,
+          <em> biodiversity conservation</em> and the <em>bioprospection</em> of
+          medicinal flora. Currently Dean, School of Life Sciences at NEHU
+          Shillong; formerly Director of CSIR-NBRI and CSIR-IITR, Lucknow.
+        </p>
+        <a className="hero-cta" href="#index" onClick={onJumpIndex}>
+          Browse the field index <span className="arr">↓</span>
+        </a>
+      </div>
+
+      <div
+        className="hero-right"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <div className="specimen-plate">
+          <span className="holotype">Holotype</span>
+          <img
+            key={cur.id}
+            src={cur.image}
+            alt={`${cur.isNew ? "Holotype specimen plate" : "Specimen plate"}: ${cur.name} (${cur.family}), described by Saroj Kanta Barik from ${cur.location}, ${cur.elev}, ${cur.year}`}
+            fetchPriority="high"
+          />
         </div>
-        <div className="hero-right">
-          <video
-            className="background-video"
-            src="/public/BGV.MOV"
-            autoPlay
-            loop
-            muted
-          ></video>
+        <div className="specimen-strip">
+          <div>
+            <div
+              style={{
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+                letterSpacing: "0.14em",
+                color: "var(--ink-soft)",
+                textTransform: "uppercase",
+              }}
+            >
+              Plate №{cur.num}
+            </div>
+            <div className="latin">{cur.name}</div>
+          </div>
+          <div style={{ textAlign: "center", lineHeight: 1.4 }}>
+            <div>{cur.location}</div>
+            <div style={{ color: "var(--moss)" }}>
+              {cur.elev} · {cur.year}
+            </div>
+          </div>
+          <div className="specimen-counter">
+            <button type="button" onClick={prev} aria-label="Previous specimen">
+              ‹
+            </button>
+            <span
+              style={{
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+                letterSpacing: "0.1em",
+                color: "var(--ink-soft)",
+              }}
+            >
+              {String(idx + 1).padStart(2, "0")} /{" "}
+              {String(SPECIES.length).padStart(2, "0")}
+            </span>
+            <button type="button" onClick={next} aria-label="Next specimen">
+              ›
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsPaused((p) => !p)}
+              aria-label={isPaused ? "Resume slideshow" : "Pause slideshow"}
+              style={{
+                marginLeft: "0.5rem",
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+                color: "var(--ink-soft)",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                opacity: isPaused ? 1 : 0.5,
+              }}
+            >
+              {isPaused ? "▶" : "⏸"}
+            </button>
+          </div>
         </div>
       </div>
     </section>

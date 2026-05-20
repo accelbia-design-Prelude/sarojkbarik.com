@@ -1,72 +1,79 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import EmailIcon from "@mui/icons-material/Email";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import XIcon from "@mui/icons-material/X";
-import "../styles/ConnectSection.css";
+import SectionHead from "./SectionHead";
 
 export default function ConnectSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver(() => {
-      if (contentRef.current) {
-        gsap.from(contentRef.current, {
-          opacity: 0,
-          y: 50,
-          duration: 0.8,
-          ease: "power3.out",
-        });
-      }
-      observer.unobserve(sectionRef.current!);
-    }, observerOptions);
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section id="connect" className="connect-section" ref={sectionRef}>
-      <div ref={contentRef} className="connect-content">
-        <h2>Let's Connect</h2>
-        <p>Get in touch with me through any of these platforms</p>
-        <div className="connect-buttons">
-          <a href="mailto:sarojkbarik@gmail.com" className="connect-btn email">
-            <span className="icon" aria-hidden="true">
-              <EmailIcon fontSize="inherit" />
-            </span>
-            <span>Email</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/saroj-barik-01448ba1/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="connect-btn linkedin"
-          >
-            <span className="icon" aria-hidden="true">
-              <LinkedInIcon fontSize="inherit" />
-            </span>
-            <span>LinkedIn</span>
-          </a>
-          <a
-            href="https://x.com/sarojkbarik"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="connect-btn x"
-          >
-            <span className="icon" aria-hidden="true">
-              <XIcon fontSize="inherit" />
-            </span>
-            <span>Twitter</span>
-          </a>
+    <section id="connect">
+      <SectionHead
+        num="§ 05 / Connect"
+        title="Get <em>in touch</em>."
+        blurb="For collaborations, lectures and press enquiries — the most direct channels:"
+      />
+      <div className="connect-card">
+        <div className="stamp">
+          Office
+          <br />
+          NEHU
+          <br />
+          Shillong
+        </div>
+        <div className="connect-grid">
+          <div>
+            <h2>
+              Always glad to <em>hear from</em>
+              <br />a fellow naturalist.
+            </h2>
+            <p>Email is the fastest channel; LinkedIn and X are checked weekly.</p>
+          </div>
+          <div className="connect-links">
+            <a className="connect-link" href="mailto:sarojkbarik@gmail.com">
+              <span>sarojkbarik@gmail.com</span>
+              <span className="lbl">Email →</span>
+            </a>
+            <a
+              className="connect-link"
+              href="/CV SK Barik March 2026.pdf"
+              download="CV_Saroj_K_Barik_2026.pdf"
+            >
+              <span>Curriculum Vitae — March 2026</span>
+              <span className="lbl">Download PDF →</span>
+            </a>
+            <a
+              className="connect-link"
+              href="https://www.linkedin.com/in/saroj-barik-01448ba1/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>/in/saroj-barik-01448ba1</span>
+              <span className="lbl">LinkedIn →</span>
+            </a>
+            <a
+              className="connect-link"
+              href="https://x.com/sarojkbarik"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>@sarojkbarik</span>
+              <span className="lbl">X (Twitter) →</span>
+            </a>
+            <a
+              className="connect-link"
+              href="https://scholar.google.co.in/citations?user=4ilAyWsAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Google Scholar</span>
+              <span className="lbl">Citations →</span>
+            </a>
+            <a
+              className="connect-link"
+              href="https://en.wikipedia.org/wiki/Saroj_Kanta_Barik"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Wikipedia profile</span>
+              <span className="lbl">Biography →</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
