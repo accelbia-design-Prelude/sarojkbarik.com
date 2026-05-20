@@ -39,7 +39,7 @@ export default function Honours() {
                 <span className="idx">{String(i + 1).padStart(2, "0")}</span>
                 <span className="name">
                   {a.name}
-                  {a.org ? <em>{a.org}</em> : null}
+                  <em>{a.org ?? " "}</em>
                 </span>
                 <span className="yr">{a.yr}</span>
               </li>

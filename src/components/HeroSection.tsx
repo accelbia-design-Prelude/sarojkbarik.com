@@ -3,6 +3,7 @@ import { SPECIES } from "../data/site";
 
 export default function HeroSection() {
   const [idx, setIdx] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const cur = SPECIES[idx];
 
   const next = useCallback(() => setIdx((i) => (i + 1) % SPECIES.length), []);
@@ -12,9 +13,10 @@ export default function HeroSection() {
   );
 
   useEffect(() => {
+    if (isPaused) return;
     const t = window.setInterval(next, 6500);
     return () => window.clearInterval(t);
-  }, [next]);
+  }, [next, isPaused]);
 
   const onJumpIndex = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -25,7 +27,7 @@ export default function HeroSection() {
   return (
     <section id="top" className="hero">
       <div className="hero-meta">
-        <span className="crosshair">b. 1965, Odisha · author abbrev. ‘Barik’</span>
+        <span className="crosshair">b. 1965, Odisha · author abbrev. 'Barik'</span>
         <span>25°34′N · 91°53′E · Shillong, Meghalaya</span>
       </div>
 
@@ -52,10 +54,19 @@ export default function HeroSection() {
         </a>
       </div>
 
-      <div className="hero-right">
+      <div
+        className="hero-right"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div className="specimen-plate">
           <span className="holotype">Holotype</span>
-          <img key={cur.id} src={cur.image} alt={`${cur.isNew ? "Holotype specimen plate" : "Specimen plate"}: ${cur.name} (${cur.family}), described by Saroj Kanta Barik from ${cur.location}, ${cur.elev}, ${cur.year}`} />
+          <img
+            key={cur.id}
+            src={cur.image}
+            alt={`${cur.isNew ? "Holotype specimen plate" : "Specimen plate"}: ${cur.name} (${cur.family}), described by Saroj Kanta Barik from ${cur.location}, ${cur.elev}, ${cur.year}`}
+            fetchPriority="high"
+          />
         </div>
         <div className="specimen-strip">
           <div>
@@ -95,6 +106,23 @@ export default function HeroSection() {
             </span>
             <button type="button" onClick={next} aria-label="Next specimen">
               ›
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsPaused((p) => !p)}
+              aria-label={isPaused ? "Resume slideshow" : "Pause slideshow"}
+              style={{
+                marginLeft: "0.5rem",
+                fontFamily: "var(--mono)",
+                fontSize: 11,
+                color: "var(--ink-soft)",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                opacity: isPaused ? 1 : 0.5,
+              }}
+            >
+              {isPaused ? "▶" : "⏸"}
             </button>
           </div>
         </div>

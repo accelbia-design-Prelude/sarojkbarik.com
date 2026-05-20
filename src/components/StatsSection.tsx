@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { SCHOLAR_METRICS } from "../data/site";
 
 /** Eased count-up. Idle until `run` flips true. */
 function useCountUp(target: number, run: boolean, dur = 1600): number {
@@ -20,7 +21,7 @@ function useCountUp(target: number, run: boolean, dur = 1600): number {
   return val;
 }
 
-/** Bio strip — short editorial blurb + four stat counters. */
+/** Bio strip — short editorial blurb + six stat counters. */
 export default function StatsSection() {
   const ref = useRef<HTMLDivElement>(null);
   const [seen, setSeen] = useState(false);
@@ -44,6 +45,8 @@ export default function StatsSection() {
   const cites = useCountUp(5405, seen);
   const yrs = useCountUp(35, seen);
   const taxa = useCountUp(8, seen);
+  const hi = useCountUp(SCHOLAR_METRICS.hIndex, seen);
+  const i10 = useCountUp(SCHOLAR_METRICS.i10Index, seen);
 
   return (
     <section id="stats">
@@ -73,6 +76,22 @@ export default function StatsSection() {
             Career
             <br />
             citations
+          </div>
+        </div>
+        <div className="stat">
+          <div className="num">{hi}</div>
+          <div className="lbl">
+            h-index
+            <br />
+            (Google Scholar)
+          </div>
+        </div>
+        <div className="stat">
+          <div className="num">{i10}</div>
+          <div className="lbl">
+            i10-index
+            <br />
+            (Google Scholar)
           </div>
         </div>
         <div className="stat">

@@ -31,6 +31,14 @@ export default function ConnectSection() {
             </a>
             <a
               className="connect-link"
+              href="/CV SK Barik March 2026.pdf"
+              download="CV_Saroj_K_Barik_2026.pdf"
+            >
+              <span>Curriculum Vitae — March 2026</span>
+              <span className="lbl">Download PDF →</span>
+            </a>
+            <a
+              className="connect-link"
               href="https://www.linkedin.com/in/saroj-barik-01448ba1/"
               target="_blank"
               rel="noopener noreferrer"

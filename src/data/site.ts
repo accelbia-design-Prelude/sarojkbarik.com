@@ -200,6 +200,12 @@ export const EXPERIENCE: Appointment[] = [
   { yr: "1995–1997", role: "Scientist",                      org: "State Forest Research Institute, Arunachal Pradesh" }
 ];
 
+/* ----- Scholar metrics (update from scholar.google.co.in/citations?user=4ilAyWsAAAAJ) ----- */
+export const SCHOLAR_METRICS = {
+  hIndex: 36,
+  i10Index: 115,
+};
+
 export const NAV = [
   { id: "index",        label: "Index" },
   { id: "publications", label: "Publications" },

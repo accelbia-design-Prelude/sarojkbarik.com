@@ -93,8 +93,10 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 18px;
   font-weight: 400;
   letter-spacing: -0.01em;
+  color: #fff;
+  padding-right: 12px;
 }
-.topbar-name em { font-style: italic; font-weight: 300; color: var(--ink-soft); margin-right: 4px; }
+.topbar-name em { font-style: italic; font-weight: 300; color: #fff; margin-right: 4px; }
 .topbar-nav {
   display: flex; gap: 4px;
   align-items: center;
