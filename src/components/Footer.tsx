@@ -48,6 +48,14 @@ export default function Footer() {
         <span className="meta-name">Saroj Kanta Barik · Field Journal</span>
         <span>Shillong / Lucknow</span>
       </div>
+      <div className="meta" style={{ justifyContent: "center", paddingTop: 0 }}>
+        <span>
+          Designed by{" "}
+          <a href="https://accelbia.design" target="_blank" rel="noopener noreferrer">
+            accelbia.design
+          </a>
+        </span>
+      </div>
     </footer>
   );
 }

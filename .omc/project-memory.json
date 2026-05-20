@@ -155,6 +155,121 @@
       ]
     }
   },
-  "hotPaths": [],
+  "hotPaths": [
+    {
+      "path": "index.html",
+      "accessCount": 8,
+      "lastAccessed": 1779221178222,
+      "type": "file"
+    },
+    {
+      "path": "src/components/HeroSection.tsx",
+      "accessCount": 6,
+      "lastAccessed": 1779221093648,
+      "type": "file"
+    },
+    {
+      "path": "src/data/site.ts",
+      "accessCount": 4,
+      "lastAccessed": 1779221042260,
+      "type": "file"
+    },
+    {
+      "path": "public/sitemap.xml",
+      "accessCount": 4,
+      "lastAccessed": 1779221087192,
+      "type": "file"
+    },
+    {
+      "path": "src/components/HerbariumSection.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1779221088558,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 3,
+      "lastAccessed": 1779220555221,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 3,
+      "lastAccessed": 1779220555379,
+      "type": "file"
+    },
+    {
+      "path": "src/App.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779220560394,
+      "type": "file"
+    },
+    {
+      "path": "src/components/WorksSection.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779220560703,
+      "type": "file"
+    },
+    {
+      "path": "src/components/StatsSection.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779220564232,
+      "type": "file"
+    },
+    {
+      "path": "src/main.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1779220693563,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Topbar.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1779220463843,
+      "type": "file"
+    },
+    {
+      "path": "public/robots.txt",
+      "accessCount": 2,
+      "lastAccessed": 1779220554843,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Honours.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1779220563837,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1779222141061,
+      "type": "file"
+    },
+    {
+      "path": "src/components/VideosSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1779220459837,
+      "type": "file"
+    },
+    {
+      "path": "src/components/ConnectSection.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1779220460016,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1779220467608,
+      "type": "file"
+    },
+    {
+      "path": "src/components/SectionHead.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1779221047951,
+      "type": "file"
+    }
+  ],
   "userDirectives": []
 }

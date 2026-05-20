@@ -48,7 +48,7 @@ export default function HerbariumSection() {
             <div className="frame">
               <span className="num-tag">№ {s.num}</span>
               {s.isNew ? <span className="new-tag">Holotype</span> : null}
-              <img src={s.image} alt={s.name} />
+              <img src={s.image} alt={`${s.name} (${s.family}) — ${s.isNew ? "holotype" : "specimen"} collected by Saroj Kanta Barik from ${s.location}, ${s.elev}, ${s.year}`} />
             </div>
             <div className="meta">
               <div>

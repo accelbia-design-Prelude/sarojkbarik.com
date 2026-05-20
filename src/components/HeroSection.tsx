@@ -35,11 +35,11 @@ export default function HeroSection() {
           <span className="ln">Saroj Kanta</span>
           <span className="ln italic">Barik.</span>
         </h1>
-        <div className="hero-role">
-          <span>Botanist</span>
-          <span>Ecologist</span>
-          <span>Environmental Scientist</span>
-        </div>
+        <h2 className="hero-role">
+          <span>Indian Botanist</span>
+          <span>Plant Ecologist</span>
+          <span>Biodiversity Conservation Scientist</span>
+        </h2>
         <p className="hero-blurb">
           A botanist, ecologist and academic administrator working across the
           Himalaya and north-east India — on <em>plant ecology</em>,
@@ -55,7 +55,7 @@ export default function HeroSection() {
       <div className="hero-right">
         <div className="specimen-plate">
           <span className="holotype">Holotype</span>
-          <img key={cur.id} src={cur.image} alt={cur.name} />
+          <img key={cur.id} src={cur.image} alt={`${cur.isNew ? "Holotype specimen plate" : "Specimen plate"}: ${cur.name} (${cur.family}), described by Saroj Kanta Barik from ${cur.location}, ${cur.elev}, ${cur.year}`} />
         </div>
         <div className="specimen-strip">
           <div>

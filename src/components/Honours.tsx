@@ -7,7 +7,7 @@ export default function Honours() {
       <SectionHead
         num="§ 03 / Honours"
         title="Fellowships <em>&amp;</em> awards."
-        blurb="Elected Fellow of all six major Indian science academies and the Linnean Society of London. Awards from Indian botanical, plant-pathology and forestry bodies."
+        blurb="Elected Fellow of all six major Indian science academies and the Linnean Society of London. Awards from Indian botanical and forestry bodies."
       />
       <div className="honours">
         <div className="honour-col">
