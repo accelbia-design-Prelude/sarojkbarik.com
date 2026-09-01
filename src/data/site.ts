@@ -182,6 +182,7 @@ export const SERVICE: string[] = [
 
 /* ----- Videos ----- */
 export const VIDEOS: Video[] = [
+  { id: "8zqh378dWd4", title: "Meghalaya: President Murmu Appoints Dr Saroj Kanta Barik as NEHU Vice-Chancellor", source: "Northeast Live", year: 2026 },
   { id: "BIhugPrmM-4", title: "Ecosystem & Biodiversity — India's real wealth", source: "RSTV Eureka", year: 2021 },
   { id: "0rrk341nFLM", title: "Address at the Rose & Gladiolus Flower Show",      source: "CSIR-NBRI Lucknow", year: 2021 },
   { id: "EDXI3E2Lqxk", title: "Inaugural Ceremony of ICPEP-7",                    source: "CSIR-NBRI · 30 Nov 2025", year: 2025 },

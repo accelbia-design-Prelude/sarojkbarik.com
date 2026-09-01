@@ -46,8 +46,9 @@ export default function HeroSection() {
           A botanist, ecologist and academic administrator working across the
           Himalaya and north-east India — on <em>plant ecology</em>,
           <em> biodiversity conservation</em> and the <em>bioprospection</em> of
-          medicinal flora. Currently Dean, School of Life Sciences at NEHU
-          Shillong; formerly Director of CSIR-NBRI and CSIR-IITR, Lucknow.
+          medicinal flora. Currently Vice-Chancellor of NEHU Shillong;
+          formerly Dean, School of Life Sciences, and Director of
+          CSIR-NBRI and CSIR-IITR, Lucknow.
         </p>
         <a className="hero-cta" href="#index" onClick={onJumpIndex}>
           Browse the field index <span className="arr">↓</span>
