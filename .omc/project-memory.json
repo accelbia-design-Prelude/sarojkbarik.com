@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1779218457812,
+  "lastScanned": 1779515613228,
   "projectRoot": "/Users/accelbia/Projects/sarojkbarik.com",
   "techStack": {
     "languages": [
@@ -79,7 +79,7 @@
       "path": "Adobe Premiere Pro Auto-Save",
       "purpose": null,
       "fileCount": 3,
-      "lastAccessed": 1779218457800,
+      "lastAccessed": 1779515613213,
       "keyFiles": [
         "BG Video--8d40695a-3c9e-be6c-2748-1bd7faf5944d-2026-05-19_22-23-06.prproj",
         "BG Video--8d40695a-3c9e-be6c-2748-1bd7faf5944d-2026-05-19_22-29-06.prproj",
@@ -89,34 +89,34 @@
     "dist": {
       "path": "dist",
       "purpose": "Distribution/build output",
-      "fileCount": 17,
-      "lastAccessed": 1779218457801,
+      "fileCount": 24,
+      "lastAccessed": 1779515613215,
       "keyFiles": [
+        "404.html",
         "Aconitum_haridasanii.png",
         "Aconitum_sikkimensis.png",
         "Anemone_ped.png",
-        "BGV.MOV",
         "CNAME"
       ]
     },
     "public": {
       "path": "public",
       "purpose": "Public files",
-      "fileCount": 15,
-      "lastAccessed": 1779218457801,
+      "fileCount": 24,
+      "lastAccessed": 1779515613215,
       "keyFiles": [
+        "404.html",
         "Aconitum_haridasanii.png",
         "Aconitum_sikkimensis.png",
         "Anemone_ped.png",
-        "CNAME",
-        "Christella.jpeg"
+        "CNAME"
       ]
     },
     "src": {
       "path": "src",
       "purpose": "Source code",
       "fileCount": 5,
-      "lastAccessed": 1779218457801,
+      "lastAccessed": 1779515613216,
       "keyFiles": [
         "App.css",
         "App.tsx",
@@ -124,21 +124,11 @@
         "main.tsx"
       ]
     },
-    "dist/assets": {
-      "path": "dist/assets",
-      "purpose": "Static assets",
-      "fileCount": 2,
-      "lastAccessed": 1779218457802,
-      "keyFiles": [
-        "index-BZ_z4qR2.css",
-        "index-W3XBUqRw.js"
-      ]
-    },
     "src/components": {
       "path": "src/components",
       "purpose": "UI components",
       "fileCount": 11,
-      "lastAccessed": 1779218457802,
+      "lastAccessed": 1779515613216,
       "keyFiles": [
         "ConnectSection.tsx",
         "Footer.tsx",
@@ -149,7 +139,7 @@
       "path": "src/data",
       "purpose": "Data files",
       "fileCount": 1,
-      "lastAccessed": 1779218457802,
+      "lastAccessed": 1779515613216,
       "keyFiles": [
         "site.ts"
       ]
