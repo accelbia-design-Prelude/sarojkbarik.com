@@ -190,7 +190,8 @@ export const VIDEOS: Video[] = [
 
 /* ----- Appointments ----- */
 export const EXPERIENCE: Appointment[] = [
-  { yr: "2025—",     role: "Dean, School of Life Sciences", org: "North-Eastern Hill University, Shillong" },
+  { yr: "2026—",     role: "Vice-Chancellor",               org: "North-Eastern Hill University, Shillong" },
+  { yr: "2025–2026", role: "Dean, School of Life Sciences", org: "North-Eastern Hill University, Shillong" },
   { yr: "2025",      role: "President",                      org: "Indian Botanical Society" },
   { yr: "2020–2022", role: "Director (concurrent)",          org: "CSIR-Indian Institute of Toxicology Research, Lucknow" },
   { yr: "2016–2022", role: "Director",                       org: "CSIR-National Botanical Research Institute, Lucknow" },
@@ -202,8 +203,9 @@ export const EXPERIENCE: Appointment[] = [
 
 /* ----- Scholar metrics (update from scholar.google.co.in/citations?user=4ilAyWsAAAAJ) ----- */
 export const SCHOLAR_METRICS = {
-  hIndex: 36,
-  i10Index: 115,
+  citations: 5555,
+  hIndex: 40,
+  i10Index: 98,
 };
 
 export const NAV = [

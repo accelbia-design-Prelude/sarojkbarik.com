@@ -42,7 +42,7 @@ export default function StatsSection() {
   }, []);
 
   const pubs = useCountUp(200, seen);
-  const cites = useCountUp(5405, seen);
+  const cites = useCountUp(SCHOLAR_METRICS.citations, seen);
   const yrs = useCountUp(35, seen);
   const taxa = useCountUp(8, seen);
   const hi = useCountUp(SCHOLAR_METRICS.hIndex, seen);
