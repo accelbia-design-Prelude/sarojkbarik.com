@@ -22,20 +22,14 @@ export default function ConnectSection() {
               Always glad to <em>hear from</em>
               <br />a fellow naturalist.
             </h2>
-            <p>Email is the fastest channel; LinkedIn and X are checked weekly.</p>
+            <p>
+              Email is the fastest channel; LinkedIn and X are checked weekly.
+            </p>
           </div>
           <div className="connect-links">
             <a className="connect-link" href="mailto:sarojkbarik@gmail.com">
               <span>sarojkbarik@gmail.com</span>
               <span className="lbl">Email →</span>
-            </a>
-            <a
-              className="connect-link"
-              href="/CV SK Barik March 2026.pdf"
-              download="CV_Saroj_K_Barik_2026.pdf"
-            >
-              <span>Curriculum Vitae — March 2026</span>
-              <span className="lbl">Download PDF →</span>
             </a>
             <a
               className="connect-link"
